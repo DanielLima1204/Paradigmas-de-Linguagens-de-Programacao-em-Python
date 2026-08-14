@@ -7,7 +7,7 @@ if salario <= 2000:
     percenual = 10
     valor_aumento = salario * 0.1
 
-    salario_aumentado = valor_aumento + salario
-    print(f"Aumento de: {percenual} %")
-    print(f"Valor do aumento: {valor_aumento:.2f}")
-    print(f"Seu novo salário é: {salario_aumentado:.2f}")
+salario_aumentado = valor_aumento + salario
+print(f"Aumento de: {percenual} %")
+print(f"Valor do aumento: {valor_aumento:.2f}")
+print(f"Seu novo salário é: {salario_aumentado:.2f}")
