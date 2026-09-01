@@ -1,0 +1,150 @@
+======================================== Sistema de classificação de crédito ===================================================================
+1. Crie um programa que analise uma solicitação de crédito.
+Solicite:
+	•	idade;
+	•	salário mensal;
+	•	valor da dívida atual;
+	•	tempo de emprego em meses;
+	•	valor solicitado;
+	•	número de parcelas.
+Calcule:
+comprometimento = dívida atual / salário
+valor da parcela = valor solicitado / número de parcelas
+A solicitação deverá ser:
+Aprovada
+Quando todas as condições forem atendidas:
+	•	idade entre 21 e 65 anos;
+	•	salário igual ou superior a R$ 2.500;
+	•	tempo de emprego igual ou superior a 12 meses;
+	•	comprometimento atual menor ou igual a 30%;
+	•	nova parcela menor ou igual a 25% do salário.
+Aprovada com restrições
+Quando:
+	•	a pessoa atender às condições de idade e salário;
+	•	possuir pelo menos 6 meses de emprego;
+	•	a soma do comprometimento atual com a nova parcela não ultrapassar 50% do salário.
+Reprovada
+Nos demais casos.
+Apresente:
+	•	valor da parcela;
+	•	percentual atual de comprometimento;
+	•	novo percentual de comprometimento;
+	•	resultado da análise;
+	•	motivo principal da reprovação, quando aplicável.
+
+
+======================================== Cálculo completo de imposto de renda ===================================================================
+Solicite:
+	•	salário bruto;
+	•	quantidade de dependentes;
+	•	valor pago em previdência;
+	•	valor pago em pensão alimentícia.
+Considere uma dedução de R$ 250 por dependente.
+Calcule:
+base de cálculo =
+salário bruto
+- previdência
+- pensão
+- dedução por dependentes
+Utilize as faixas:
+Base de cálculo	Alíquota
+Até R$ 2.500	Isento
+De R$ 2.500,01 até R$ 3.500	7,5%
+De R$ 3.500,01 até R$ 5.000	15%
+De R$ 5.000,01 até R$ 7.500	22,5%
+Acima de R$ 7.500	27,5%
+Apresente:
+	•	salário bruto; - ok
+	•	total de deduções; - ok
+	•	base de cálculo; - ok
+	•	alíquota; - ok
+	•	imposto; - ok
+	•	salário líquido. - ok
+Valide situações em que as deduções sejam maiores que o salário bruto.
+
+======================================== Sistema de avaliação acadêmica =========================================================================
+
+Solicite:
+	•	três notas;
+	•	percentual de frequência;
+	•	quantidade de atividades entregues;
+	•	quantidade total de atividades.
+Calcule:
+média = soma das notas / 3
+percentual de atividades entregues
+Classifique o aluno como:
+Aprovado com excelência
+	•	média igual ou superior a 9;
+	•	frequência igual ou superior a 90%;
+	•	todas as atividades entregues.
+Aprovado
+	•	média igual ou superior a 7;
+	•	frequência igual ou superior a 75%;
+	•	pelo menos 70% das atividades entregues.
+Recuperação
+	•	média entre 5 e 6,99;
+	•	frequência igual ou superior a 75%.
+Reprovado por frequência
+	•	frequência inferior a 75%, independentemente da média.
+Reprovado por nota
+	•	média inferior a 5.
+Apresente também o principal requisito que impediu uma classificação superior.
+
+======================================== Cálculo de frete inteligente ==========================================================================
+Solicite:
+	•	peso da encomenda;
+	•	distância em quilômetros;
+	•	tipo de entrega: normal, expressa ou urgente;
+	•	se o cliente é assinante;
+	•	valor da compra.
+Regras básicas:
+taxa por peso = peso × R$ 2,50
+taxa por distância = distância × R$ 0,30
+Adicionais:
+	•	entrega normal: sem adicional;
+	•	entrega expressa: adicional de 30%;
+	•	entrega urgente: adicional de 60%;
+	•	peso acima de 30 kg: adicional fixo de R$ 80;
+	•	distância acima de 500 km: adicional fixo de R$ 100.
+Descontos:
+	•	assinante: 15%;
+	•	compra acima de R$ 1.000: mais 10%;
+	•	o desconto máximo permitido é de 20%.
+Frete gratuito somente quando:
+	•	cliente assinante;
+	•	compra igual ou superior a R$ 2.000;
+	•	entrega normal;
+	•	peso igual ou inferior a 10 kg.
+Apresente todos os componentes do cálculo.
+
+======================================== Diagnóstico financeiro familiar ==========================================================================
+Solicite:
+	•	renda mensal;
+	•	gastos com moradia; 
+	•	alimentação; 
+	•	transporte; 
+	•	saúde; 
+	•	educação; 
+	•	lazer;
+	•	dívidas.
+Calcule:
+	•	total de despesas;
+	•	saldo mensal;
+	•	percentual da renda comprometida;
+	•	percentual gasto com dívidas.
+Classifique a situação como:
+	•	saudável;
+	•	atenção;
+	•	crítica;
+	•	insolvência.
+Crie as regras utilizando uma combinação de:
+	•	saldo mensal;
+	•	percentual total comprometido;
+	•	percentual de dívidas.
+Exemplo de classificação:
+	•	saudável: comprometimento até 70% e dívidas até 20%;
+	•	atenção: comprometimento entre 70% e 85%;
+	•	crítica: comprometimento acima de 85% ou dívidas acima de 35%;
+	•	insolvência: despesas maiores que a renda e saldo negativo superior a 20% da renda.
+Apresente recomendações diferentes para cada situação.
+
