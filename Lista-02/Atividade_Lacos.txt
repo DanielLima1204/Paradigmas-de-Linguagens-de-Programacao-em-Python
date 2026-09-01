@@ -1,0 +1,202 @@
+1. Caixa eletrônico com saldo e tentativas 
+Crie um caixa eletrônico que solicite uma senha.
+O usuário terá três tentativas.
+Após a autenticação, apresente repetidamente o menu:
+1 - Consultar saldo
+2 - Depositar
+3 - Sacar
+4 - Exibir quantidade de operações
+5 - Encerrar
+Regras:
+•	não permitir depósitos menores ou iguais a zero;
+•	não permitir saques maiores que o saldo;
+•	não permitir saques menores ou iguais a zero;
+•	não permitir opções inexistentes;
+•	contar depósitos e saques realizados;
+•	somar o total depositado;
+•	somar o total sacado;
+•	encerrar somente quando o usuário escolher a opção 5.
+No encerramento, exiba um relatório completo.
+
+2. Jogo de adivinhação com níveis
+Defina internamente um número secreto.
+Solicite um nível:
+•	fácil: 10 tentativas;
+•	médio: 7 tentativas;
+•	difícil: 5 tentativas.
+A cada tentativa:
+•	informe se o valor digitado é maior ou menor que o número secreto;
+•	informe quantas tentativas restam;
+•	rejeite valores fora do intervalo de 1 a 100;
+•	valores inválidos não devem consumir tentativa.
+Ao final, informe:
+•	vitória ou derrota;
+•	quantidade de tentativas utilizadas;
+•	pontuação.
+Sugestão:
+pontuação = tentativas restantes × 100
+
+3. Controle de estoque por menu
+Defina:
+estoque = 100
+Apresente repetidamente:
+1 - Entrada de mercadoria
+2 - Saída de mercadoria
+3 - Consultar estoque
+4 - Definir estoque mínimo
+5 - Encerrar
+Regras:
+•	nenhuma entrada pode ser menor ou igual a zero;
+•	nenhuma saída pode ultrapassar o estoque;
+•	exibir alerta quando o estoque ficar abaixo do mínimo;
+•	contar quantas entradas e saídas foram realizadas;
+•	registrar o total movimentado;
+•	impedir estoque negativo.
+Ao encerrar, exiba:
+•	estoque inicial;
+•	total de entradas;
+•	total de saídas;
+•	estoque final;
+•	quantidade de operações;
+•	situação do estoque.
+
+4. Simulação de financiamento
+Solicite:
+•	valor financiado;
+•	taxa mensal;
+•	valor da parcela máxima;
+•	limite máximo de meses.
+Utilizando while, simule o pagamento mês a mês.
+Em cada mês:
+1.	aplique os juros ao saldo;
+2.	desconte a parcela;
+3.	apresente o saldo restante.
+O programa deverá encerrar quando:
+•	o saldo for quitado;
+•	o limite de meses for atingido;
+•	a parcela não for suficiente para reduzir a dívida.
+Apresente:
+•	total de meses;
+•	total pago;
+•	total de juros;
+•	saldo restante;
+•	resultado da simulação.
+
+5. Sistema de votação
+Cadastre uma votação com três candidatos:
+1 - Candidato A
+2 - Candidato B
+3 - Candidato C
+4 - Voto em branco
+5 - Voto nulo
+0 - Encerrar votação
+O programa deverá continuar até que seja digitado 0.
+Calcule:
+•	votos de cada candidato;
+•	votos em branco;
+•	votos nulos;
+•	total de votos;
+•	percentual de cada candidato;
+•	percentual de votos válidos;
+•	percentual de votos inválidos;
+•	vencedor;
+•	possível empate.
+Considere votos válidos apenas os votos dos candidatos.
+
+6. Relatório de desempenho de turma
+Solicite a quantidade de alunos.
+Para cada aluno, receba:
+•	nome;
+•	nota 1;
+•	nota 2;
+•	nota 3;
+•	frequência.
+Calcule:
+•	média individual;
+•	situação individual;
+•	média geral da turma;
+•	maior média;
+•	menor média;
+•	nome do melhor aluno;
+•	nome do aluno com menor média;
+•	quantidade de aprovados;
+•	quantidade em recuperação;
+•	quantidade reprovada;
+•	percentual de aprovação.
+Não utilize listas.
+
+7. Análise de vendas de vendedores
+Solicite a quantidade de vendedores.
+Para cada vendedor, receba:
+•	nome;
+•	salário-base;
+•	valor total vendido;
+•	quantidade de vendas.
+Calcule a comissão:
+•	até R$ 10.000: 3%;
+•	de R$ 10.000,01 até R$ 30.000: 5%;
+•	acima de R$ 30.000: 8%;
+•	bônus adicional de R$ 500 quando houver mais de 20 vendas.
+Apresente:
+•	comissão;
+•	bônus;
+•	remuneração final;
+•	média de valor por venda.
+Ao final, apresente:
+•	total vendido pela equipe;
+•	total pago em comissões;
+•	maior vendedor;
+•	menor vendedor;
+•	média de vendas da equipe.
+
+8. Série estatística sem listas
+Solicite uma quantidade de números.
+Para cada número, determine:
+•	maior valor;
+•	menor valor;
+•	soma;
+•	média;
+•	quantidade de positivos;
+•	quantidade de negativos;
+•	quantidade de zeros;
+•	quantidade de pares;
+•	quantidade de ímpares;
+•	percentual de números positivos;
+•	percentual de números pares.
+Não utilize listas.
+O primeiro número pode ser utilizado para inicializar o maior e o menor valor.
+
+9. Simulação de crescimento populacional
+Solicite:
+•	população inicial da cidade A;
+•	taxa anual de crescimento da cidade A;
+•	população inicial da cidade B;
+•	taxa anual de crescimento da cidade B;
+•	quantidade máxima de anos.
+Utilizando for, apresente a população de ambas as cidades a cada ano.
+Interrompa quando:
+•	a cidade com menor população ultrapassar a outra;
+•	o limite de anos for atingido.
+Apresente:
+•	quantidade de anos necessários;
+•	população final de cada cidade;
+•	diferença final;
+•	se houve ultrapassagem.
+
+10. Gerador de relatório de parcelas
+Solicite:
+•	valor de uma compra;
+•	quantidade máxima de parcelas;
+•	taxa de juros mensal.
+Para cada opção de parcelamento, de 1 até o limite informado, calcule:
+•	quantidade de parcelas;
+•	valor total com juros;
+•	valor de cada parcela;
+•	total de juros pagos.
+Considere juros simples:
+juros = valor × taxa × quantidade de meses
+Exemplo de relatório:
+1x de R$ 1.000,00 — Total: R$ 1.000,00
+2x de R$ 525,00 — Total: R$ 1.050,00
+3x de R$ 366,67 — Total: R$ 1.100,00
+Informe qual opção possui parcela inferior a um limite definido pelo usuário.
