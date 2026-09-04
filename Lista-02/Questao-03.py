@@ -9,14 +9,23 @@ def registrarMovimentacoes(movimentacao: dict):
     global total_entradas
     global total_saidas
     if movimentacao["Tipo"] == "Entrada": total_entradas += movimentacao["Quantidade"]
-    if movimentacao["Tipo"] == "Saida": total_entradas += movimentacao["Quantidade"]
+    if movimentacao["Tipo"] == "Saida": total_saidas += movimentacao["Quantidade"]
     movimentacoes.append(movimentacao)
 
 def exibirInformacoes():
     if len(movimentacoes) > 0:
-       print(f"""
-         Estoque inicial --------- {estoque_inicial}
+        print(f"""
+         Estoque inicial ------------- {estoque_inicial}
+         Total de Entradas ----------- {total_entradas}
+         Total de Saidas ------------- {total_saidas}
+         Estoque Final --------------- {estoque}
+         Total de movimentacoes ------ {len(movimentacoes)}
        """)
+        print("--------- TODAS MOVIMENTAÇÕES -------------")
+        for x in movimentacoes:
+            print(f"------- Movimentação -------")
+            for key, value in x.items():
+                print(f"{key} ------------ {value}")
 
 def consultarEstoque():
     print(f"--------- CONSULTA DE SALDO ATUAL DO ESTOQUE -----------")
@@ -25,7 +34,7 @@ def consultarEstoque():
 def entradaMercadoria():
     global estoque
     while True:
-        entrada = int(input("Digite a quantidade desejada: "))
+        entrada = int(input("Digite a quantidade que deseja adicionar: "))
         if entrada <= 0:
             print("Os valores de entrada devem ser maior que zero!")
             continue
@@ -41,7 +50,7 @@ def saidaMercadoria():
     while True:
         saida = int(input("Digite a quantidade que desaja retirar: "))
         if saida > estoque:
-            print("A quantidade que deseja retirar e maior que a contida no estoque!")
+            print("A quantidade que deseja retirar é maior que a contida no estoque!")
             continue
         elif saida <= 0:
             print("A quantidade para retirada deve ser maior que zero!")
@@ -51,6 +60,7 @@ def saidaMercadoria():
             print(f"Entrada de {saida} no estoque novo saldo de {estoque} itens.")
             movimentacao = {"Tipo": "Saida", "Quantidade": saida}
             registrarMovimentacoes(movimentacao)
+            break
 
 def definirEstoqueMinimo():
     global estoque_minimo
@@ -62,12 +72,14 @@ def definirEstoqueMinimo():
         else:
             estoque_minimo = valor_estoque_minimo
             print(f"Valor de estoque minimo definido para: {estoque_minimo}")
+            break
 
 def exibirAlerta():
-    if estoque >= estoque_minimo:
+    if estoque <= estoque_minimo:
         print("SEU ESTOQUE ESTA NO MINIMO! POR FAVOR REPONHA OS ITENS!")
 
 while True:
+    exibirAlerta()
     opcao = input("""
     -------------- CONTROLE DE ESTOQUE --------------
         1 - Entrada de mercadoria
@@ -79,14 +91,17 @@ while True:
     DIGITE UMA DAS OPCOES: """)
     match opcao:
         case '1':
-            pass
+            entradaMercadoria()
+            continue
         case '2':
-            pass
+            saidaMercadoria()
+            continue
         case '3':
             consultarEstoque()
             continue
         case '4':
-            pass
+            definirEstoqueMinimo()
+            continue
         case '5':
             exibirInformacoes()
             break
