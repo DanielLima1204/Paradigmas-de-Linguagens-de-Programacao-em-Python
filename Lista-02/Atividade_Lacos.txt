@@ -8,10 +8,10 @@ Após a autenticação, apresente repetidamente o menu:
 4 - Exibir quantidade de operações
 5 - Encerrar
 Regras:
-•	não permitir depósitos menores ou iguais a zero;
-•	não permitir saques maiores que o saldo;
-•	não permitir saques menores ou iguais a zero;
-•	não permitir opções inexistentes;
+•	não permitir depósitos menores ou iguais a zero; - ok
+•	não permitir saques maiores que o saldo; - ok
+•	não permitir saques menores ou iguais a zero; - ok
+•	não permitir opções inexistentes; - ok
 •	contar depósitos e saques realizados;
 •	somar o total depositado;
 •	somar o total sacado;
