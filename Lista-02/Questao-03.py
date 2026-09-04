@@ -1,9 +1,9 @@
 estoque = 100
 estoque_minimo = 1
-total_entradas = 500
-total_saidas = 20
+total_entradas = 0
+total_saidas = 0
 movimentacoes = list()
-estoque_inicial = (total_entradas - total_saidas) - estoque
+estoque_inicial = estoque - total_entradas + total_saidas
 
 def registrarMovimentacoes(movimentacao: dict):
     global total_entradas
@@ -14,7 +14,9 @@ def registrarMovimentacoes(movimentacao: dict):
 
 def exibirInformacoes():
     if len(movimentacoes) > 0:
-       pass
+       print(f"""
+         Estoque inicial --------- {estoque_inicial}
+       """)
 
 def consultarEstoque():
     print(f"--------- CONSULTA DE SALDO ATUAL DO ESTOQUE -----------")
@@ -24,7 +26,7 @@ def entradaMercadoria():
     global estoque
     while True:
         entrada = int(input("Digite a quantidade desejada: "))
-        if entrada < 0:
+        if entrada <= 0:
             print("Os valores de entrada devem ser maior que zero!")
             continue
         else:
@@ -32,6 +34,7 @@ def entradaMercadoria():
             print(f"Entrada de {entrada} no estoque novo saldo de {estoque} itens.")
             movimentacao = {"Tipo": "Entrada", "Quantidade": entrada}
             registrarMovimentacoes(movimentacao)
+            break
 
 def saidaMercadoria():
     global estoque
@@ -85,6 +88,7 @@ while True:
         case '4':
             pass
         case '5':
+            exibirInformacoes()
             break
         case _:
             print("Digite uma das opcoes validas!")
